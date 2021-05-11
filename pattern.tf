@@ -15,6 +15,7 @@ provider "yandex" {
 
 resource "yandex_compute_instance" "vm" {
   count = 2  
+  Name = "vm_pattern ${count.index}"
 
   resources {
     cores  = 2
@@ -37,9 +38,7 @@ resource "yandex_compute_instance" "vm" {
     ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
   }
   
- 
-  Name = "vm_pattern_${count.index}"
-  
+
 
 }
 
