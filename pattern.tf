@@ -15,9 +15,9 @@ provider "yandex" {
 
 resource "yandex_compute_instance" "vm" {
   count = 2  
-  name = "vm_pattern_${count.index}"
-
-  resources {
+ name = "vm-pattern-{count.index}"
+ 
+ resources {
     cores  = 2
     memory = 2
   }
