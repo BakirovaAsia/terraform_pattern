@@ -18,8 +18,8 @@ count = 2
 name = "vm-pattern-${count.index}"
  
  resources {
-    cores  = 2
-    memory = 2
+    cores  = 4
+    memory = 4
   }
 
   boot_disk {
