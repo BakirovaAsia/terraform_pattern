@@ -37,9 +37,9 @@ resource "yandex_compute_instance" "vm" {
     ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
   }
   
-  tags = {
-    Name = "vm_pattern_${count.index}"
-  }
+ 
+  Name = "vm_pattern_${count.index}"
+  
 
 }
 
